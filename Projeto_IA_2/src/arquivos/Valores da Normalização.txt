@@ -1,0 +1,30 @@
+Idade
+
+18 - 24 = 0
+25 - 34 = 0,246
+35-44 = 0,409
+45-54 = 0,577
+55-64 = 0,783
+65+ = 1
+
+Educação
+
+Left school before 16 years = 0
+Left school at 16 years = 0,158
+Left school at 17 years = 0,226
+Left school at 18 years = 0,273
+Some college or university, no certificate or degree = 0,413
+Professional certificate/ diploma = 0,538
+University degree = 0,654
+Masters degree = 0,814
+Doctorate degree = 1
+
+Etnia
+
+Asian = 0|0|0|0|0|0|1
+Black = 0|0|0|0|0|1|0
+Mixed-Black/Asian = 0|0|0|0|1|0|0
+Mixed-White/Asian = 0|0|0|1|0|0|0
+Mixed-White/Black = 0|0|1|0|0|0|0
+Other = 0|1|0|0|0|0|0
+White = 1|0|0|0|0|0|0
