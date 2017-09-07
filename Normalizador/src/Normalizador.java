@@ -70,14 +70,14 @@ public class Normalizador {
 						min = -0.95197;
 						max = 2.59171;
 						valor = (valor - min) / (max - min);
-						bw.write(df.format(valor) + "|");
+						bw.write(df.format(valor) + ":");
 						break;
 					case 1:
 						valor = Double.parseDouble(vetor[x]);
 						if (valor >= 0) {
-							bw.write("1|0|");
+							bw.write("1:0:");
 						} else {
-							bw.write("0|1|");
+							bw.write("0:1:");
 						}
 
 						break;
@@ -86,29 +86,29 @@ public class Normalizador {
 						min = -2.43591;
 						max = 1.98437;
 						valor = (valor - min) / (max - min);
-						bw.write(df.format(valor) + "|");
+						bw.write(df.format(valor) + ":");
 						break;
 					case 3:
 						valor = Double.parseDouble(vetor[x]);
 						if (valor == -0.50212) {
-							bw.write("0|0|0|0|0|0|1|");
+							bw.write("0:0:0:0:0:0:1:");
 						} else {
 							if (valor == -1.10702) {
-								bw.write("0|0|0|0|0|1|0|");
+								bw.write("0:0:0:0:0:1:0:");
 							} else {
 								if (valor == 1.90725) {
-									bw.write("0|0|0|0|1|0|0|");
+									bw.write("0:0:0:0:1:0:0:");
 								} else {
 									if (valor == 0.12600) {
-										bw.write("0|0|0|1|0|0|0|");
+										bw.write("0:0:0:1:0:0:0:");
 									} else {
 										if (valor == -0.22166) {
-											bw.write("0|0|1|0|0|0|0|");
+											bw.write("0:0:1:0:0:0:0:");
 										} else {
 											if (valor == 0.11440) {
-												bw.write("0|1|0|0|0|0|0|");
+												bw.write("0:1:0:0:0:0:0:");
 											} else {
-												bw.write("1|0|0|0|0|0|0|");
+												bw.write("1:0:0:0:0:0:0:");
 											}
 										}
 									}
@@ -117,7 +117,7 @@ public class Normalizador {
 						}
 						break;
 					default:
-						bw.write(vetor[x] + "|");
+						bw.write(vetor[x] + ":");
 						break;
 
 					}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Normalizador/src"/>
+	<classpathentry excluding="codigos/" kind="src" path="Projeto_IA_2/src"/>
+	<classpathentry kind="src" path="Projeto_IA_2/src/codigos"/>
+	<classpathentry kind="output" path="Normalizador/bin"/>
+</classpath>

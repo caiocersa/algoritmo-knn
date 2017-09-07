@@ -16,7 +16,6 @@ public class Padrao {
 
 	public Padrao(double idade, int sexoG1, int sexoG2, double grauInstrucao, int etnia0, int etnia1, int etnia2,
 			int etnia3, int etnia4, int etnia5, int etnia6, String classificacao) {
-		super();
 		this.idade = idade;
 		this.sexoG1 = sexoG1;
 		this.sexoG2 = sexoG2;
