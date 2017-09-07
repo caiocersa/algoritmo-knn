@@ -1,5 +1,7 @@
+package codigos;
 
-public class Padrao {
+
+public class Padrao implements Comparable<Padrao>  {
 	
 	private double idade;
 	private int sexoG1;
@@ -13,10 +15,13 @@ public class Padrao {
 	private int etnia5;
 	private int etnia6;
 	private String classificacao;
+        private double distancia;
+
+
 
 	public Padrao(double idade, int sexoG1, int sexoG2, double grauInstrucao, int etnia0, int etnia1, int etnia2,
-			int etnia3, int etnia4, int etnia5, int etnia6, String classificacao) {
-		super();
+			int etnia3, int etnia4, int etnia5, int etnia6, String classificacao, double distancia) {
+		
 		this.idade = idade;
 		this.sexoG1 = sexoG1;
 		this.sexoG2 = sexoG2;
@@ -29,6 +34,7 @@ public class Padrao {
 		this.etnia5 = etnia5;
 		this.etnia6 = etnia6;
 		this.classificacao = classificacao;
+                this.distancia = distancia;
 	}
 
 	
@@ -131,5 +137,24 @@ public class Padrao {
 	public void setClassificacao(String classificacao) {
 		this.classificacao = classificacao;
 	}
+        
+        public double getDistancia() {
+                return distancia;
+    }
+
+        public void setDistancia(double distancia) {
+            this.distancia = distancia;
+    }
+    
+    @Override
+    public int compareTo(Padrao ca) {
+        if (this.distancia < ca.distancia) {
+            return -1;
+        }
+        if (this.distancia > ca.distancia) {
+            return 1;
+        }
+        return 0;
+    }
 
 }
