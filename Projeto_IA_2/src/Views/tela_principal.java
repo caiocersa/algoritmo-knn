@@ -500,7 +500,28 @@ public class tela_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClassificarActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
-        // TODO add your handling code here:
+        Log.LOG.clear();
+        txtAlcool.setText("");
+            txtAnfetaminas.setText("");
+            txtNitrito.setText("");
+            txtBenzodiazepina.setText("");
+            txtCafeina.setText("");
+            txtMaconha.setText("");
+            txtChocolate.setText("");
+            txtCocaina.setText("");
+            txtCrack.setText("");
+            txtEcstasy.setText("");
+            txtHeroina.setText("");
+            txtKetamina.setText("");
+            txtDrogas.setText("");
+            txtLsd.setText("");
+            txtMetadona.setText("");
+            txtCogumelos.setText("");
+            txtNicotina.setText("");
+            txtVsa.setText("");
+            jTextLog.setText("");
+            
+        
     }//GEN-LAST:event_btnLimparActionPerformed
 
     /**
