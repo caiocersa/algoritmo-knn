@@ -5,12 +5,12 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Classificador {
+public class ClassificadorParcial {
     ArrayList<Padrao> BASE = new ArrayList<Padrao>();
     
-    public Classificador (){
+    public ClassificadorParcial (){
         LeituraPadrao lp = new LeituraPadrao();
-        BASE = lp.lerArquivo();
+        BASE = lp.lerArquivoParcial();
     }
     
     public String classifica (Padrao p){

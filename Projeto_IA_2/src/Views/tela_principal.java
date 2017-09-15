@@ -6,6 +6,7 @@
 package Views;
 
 import codigos.Classificador;
+import codigos.ClassificadorParcial;
 import codigos.Log;
 import codigos.Padrao;
 import javax.swing.JOptionPane;
@@ -21,6 +22,8 @@ public class tela_principal extends javax.swing.JFrame {
     int G2;
     double GRAU;
     int ET1, ET2, ET3, ET4, ET5, ET6, ET7;
+    
+    String result;
 
     public tela_principal() {
         initComponents();
@@ -90,6 +93,7 @@ public class tela_principal extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         btnLimpar = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
+        btnComparar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Classificador de Risco");
@@ -349,7 +353,7 @@ public class tela_principal extends javax.swing.JFrame {
                 btnClassificarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnClassificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 136, 33));
+        jPanel1.add(btnClassificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 150, 33));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 690, 10));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 207, 690, 10));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 690, 10));
@@ -360,8 +364,17 @@ public class tela_principal extends javax.swing.JFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 136, 33));
+        jPanel1.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 136, 33));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 690, 10));
+
+        btnComparar.setText("Comparar(base parcial)");
+        btnComparar.setEnabled(false);
+        btnComparar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCompararActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnComparar, new org.netbeans.lib.awtextra.AbsoluteConstraints(486, 160, 210, 33));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -469,7 +482,7 @@ public class tela_principal extends javax.swing.JFrame {
         } else {
             Padrao p = new Padrao(IDADE, G1, G2, GRAU, ET1, ET2, ET3, ET4, ET5, ET6, ET7, null, 0);
             Classificador k = new Classificador();
-            String result = k.classifica(p);
+            result = k.classifica(p);
             String[] r = result.split(":");
 
             txtAlcool.setText(classifica(r[0]));
@@ -491,9 +504,9 @@ public class tela_principal extends javax.swing.JFrame {
             txtNicotina.setText(classifica(r[18]));
             txtVsa.setText(classifica(r[19]));
 
-            for (String s : Log.LOG) {
-                jTextLog.setText(jTextLog.getText() + "\n" + s);
-            }
+            jTextLog.setText(Log.resumo());          
+            
+            btnComparar.setEnabled(true);
         }
 
 
@@ -523,6 +536,13 @@ public class tela_principal extends javax.swing.JFrame {
             
         
     }//GEN-LAST:event_btnLimparActionPerformed
+
+    private void btnCompararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompararActionPerformed
+        tela_comparacao tc = new tela_comparacao();
+        tc.preencherClassificarGeral(result,jComboSexo.getSelectedIndex(),txtIdade.getText(),jComboEducacao.getSelectedIndex(),jComboEtnia.getSelectedIndex());
+        tc.classificarParcial(new Padrao(IDADE, G1, G2, GRAU, ET1, ET2, ET3, ET4, ET5, ET6, ET7, null, 0));
+        tc.show();
+    }//GEN-LAST:event_btnCompararActionPerformed
 
     /**
      * @param args the command line arguments
@@ -563,6 +583,7 @@ public class tela_principal extends javax.swing.JFrame {
     private javax.swing.JLabel Idade;
     private javax.swing.JLabel Sexo;
     private javax.swing.JButton btnClassificar;
+    private javax.swing.JButton btnComparar;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JComboBox<String> jComboEducacao;
     private javax.swing.JComboBox<String> jComboEtnia;
