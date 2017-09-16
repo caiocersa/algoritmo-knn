@@ -202,8 +202,8 @@ public class tela_comparacao extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 470, 460));
 
         titulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titulo.setText("Comparação - Classificador de Risco ( Drogas )");
-        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 11, -1, -1));
+        titulo.setText("K- DRUGS CLASSIFIER");
+        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
 
         jComboSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         jComboSexo.setEnabled(false);

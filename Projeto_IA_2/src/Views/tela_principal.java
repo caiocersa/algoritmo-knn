@@ -107,11 +107,11 @@ public class tela_principal extends javax.swing.JFrame {
         jTextLog.setRows(5);
         jScrollPane1.setViewportView(jTextLog);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 470, 460));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 510, 460));
 
         titulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titulo.setText("Classificador de Risco ( Drogas )");
-        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 11, -1, -1));
+        titulo.setText("K- DRUGS CLASSIFIER");
+        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
         jComboSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         jComboSexo.addActionListener(new java.awt.event.ActionListener() {
@@ -482,7 +482,7 @@ public class tela_principal extends javax.swing.JFrame {
         } else {
             Padrao p = new Padrao(IDADE, G1, G2, GRAU, ET1, ET2, ET3, ET4, ET5, ET6, ET7, null, 0);
             Classificador k = new Classificador();
-            result = k.classifica(p);
+            result = k.Classificar(p);
             String[] r = result.split(":");
 
             txtAlcool.setText(classifica(r[0]));
