@@ -108,11 +108,11 @@ public class tela_principal extends javax.swing.JFrame {
         jTextLog.setRows(5);
         jScrollPane1.setViewportView(jTextLog);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 470, 460));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 510, 460));
 
         titulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titulo.setText("Classificador de Risco ( Drogas )");
-        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 11, -1, -1));
+        titulo.setText("K- DRUGS CLASSIFIER");
+        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
         jComboSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         jComboSexo.addActionListener(new java.awt.event.ActionListener() {
@@ -482,7 +482,7 @@ public class tela_principal extends javax.swing.JFrame {
         } else {
             Padrao p = new Padrao(IDADE, G1, G2, GRAU, ET1, ET2, ET3, ET4, ET5, ET6, ET7, null, 0);
             k = new Classificador();
-            result = k.classifica(p);
+            result = k.Classificar(p);
             String[] r = result.split(":");
 
             txtAlcool.setText(classifica(r[0]));
@@ -512,32 +512,53 @@ public class tela_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClassificarActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
-        // TODO add your handling code here:
+        Log.LOG.clear();
+        txtAlcool.setText("");
+        txtAnfetaminas.setText("");
+        txtNitrito.setText("");
+        txtBenzodiazepina.setText("");
+        txtCafeina.setText("");
+        txtMaconha.setText("");
+        txtChocolate.setText("");
+        txtCocaina.setText("");
+        txtCrack.setText("");
+        txtEcstasy.setText("");
+        txtHeroina.setText("");
+        txtKetamina.setText("");
+        txtDrogas.setText("");
+        txtLsd.setText("");
+        txtMetadona.setText("");
+        txtCogumelos.setText("");
+        txtNicotina.setText("");
+        txtVsa.setText("");
+        jTextLog.setText("");
+
+
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnCompararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompararActionPerformed
         float[] porc = k.classificarParcial();
-        txtAlcool.setText(""+porc[0]+"%");
-        txtAnfetaminas.setText(""+porc[1]+"%");
-        txtNitrito.setText(""+porc[2]+"%");
-        txtBenzodiazepina.setText(""+porc[3]+"%");
-        txtCafeina.setText(""+porc[4]+"%");
-        txtMaconha.setText(""+porc[5]+"%");
-        txtChocolate.setText(""+porc[6]+"%");
-        txtCocaina.setText(""+porc[7]+"%");
-        txtCrack.setText(""+porc[9]+"%");
-        txtEcstasy.setText(""+porc[10]+"%");
-        txtHeroina.setText(""+porc[11]+"%");
-        txtKetamina.setText(""+porc[12]+"%");
-        txtDrogas.setText(""+porc[13]+"%");
-        txtLsd.setText(""+porc[14]+"%");
-        txtMetadona.setText(""+porc[15]+"%");
-        txtCogumelos.setText(""+porc[16]+"%");
-        txtNicotina.setText(""+porc[18]+"%");
-        txtVsa.setText(""+porc[19]+"%");
-        
-        jTextLog.setText("");        
-        jTextLog.setText(""+LogClassParcial.resumo());
+        txtAlcool.setText("" + porc[0] + "%");
+        txtAnfetaminas.setText("" + porc[1] + "%");
+        txtNitrito.setText("" + porc[2] + "%");
+        txtBenzodiazepina.setText("" + porc[3] + "%");
+        txtCafeina.setText("" + porc[4] + "%");
+        txtMaconha.setText("" + porc[5] + "%");
+        txtChocolate.setText("" + porc[6] + "%");
+        txtCocaina.setText("" + porc[7] + "%");
+        txtCrack.setText("" + porc[9] + "%");
+        txtEcstasy.setText("" + porc[10] + "%");
+        txtHeroina.setText("" + porc[11] + "%");
+        txtKetamina.setText("" + porc[12] + "%");
+        txtDrogas.setText("" + porc[13] + "%");
+        txtLsd.setText("" + porc[14] + "%");
+        txtMetadona.setText("" + porc[15] + "%");
+        txtCogumelos.setText("" + porc[16] + "%");
+        txtNicotina.setText("" + porc[18] + "%");
+        txtVsa.setText("" + porc[19] + "%");
+
+        jTextLog.setText("");
+        jTextLog.setText("" + LogClassParcial.resumo());
     }//GEN-LAST:event_btnCompararActionPerformed
 
     /**

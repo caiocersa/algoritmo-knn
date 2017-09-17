@@ -70,11 +70,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Compara&#xe7;&#xe3;o - Classificador de Risco ( Drogas )"/>
+            <Property name="text" type="java.lang.String" value="K- DRUGS CLASSIFIER"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="336" y="11" width="-1" height="-1"/>
+              <AbsoluteConstraints x="390" y="10" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
