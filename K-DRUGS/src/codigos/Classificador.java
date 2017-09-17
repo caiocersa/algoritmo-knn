@@ -34,7 +34,7 @@ public class Classificador {
         }
 
         Collections.sort(BASE);
-        for (int x = 0; x < 10; x++) {
+        for (int x = 0; x < 9; x++) {
             Log.LOG.add("Dado da Base \n[ " + BASE.get(x).getClassificacao() + "], \nDistancia = " + 
                     formatter.format(BASE.get(x).getDistancia())+"\n");
 
@@ -99,7 +99,7 @@ public class Classificador {
         return -1;
     }
     
-    public float[] classificarParcial(){
+    public float[] ClassificarParcial(){
         Log.limpaLog();
         LogClassParcial.limpaLog();
         LeituraPadrao lp = new LeituraPadrao();
@@ -109,7 +109,6 @@ public class Classificador {
         float[] porc = new float[padroes.get(0).getClassificacao().split(":").length];
         
         for (int x = 0; x < padroes.size(); x++) {
-            //Log.LOG.add("Parão testado");
             String[] p = padroes.get(x).getClassificacao().split(":");
             String[] resultado = Classificar(padroes.get(x)).split(":");
             float totalAux = 0f;
@@ -126,9 +125,6 @@ public class Classificador {
             if (i != 8) 
             porc[i] = (somaAcertos[i]/padroes.size())*100;
         }
-        
-        return porc;
-        
+        return porc; 
     }
-    
 }

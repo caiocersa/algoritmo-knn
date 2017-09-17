@@ -101,18 +101,13 @@ public class tela_principal extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1230, 580));
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jTextLog.setEditable(false);
         jTextLog.setColumns(20);
         jTextLog.setRows(5);
         jScrollPane1.setViewportView(jTextLog);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 510, 460));
-
         titulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         titulo.setText("K- DRUGS CLASSIFIER");
-        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
         jComboSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Feminino" }));
         jComboSexo.addActionListener(new java.awt.event.ActionListener() {
@@ -120,38 +115,28 @@ public class tela_principal extends javax.swing.JFrame {
                 jComboSexoActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 78, 98, -1));
 
         Sexo.setText("Sexo :");
-        jPanel1.add(Sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 81, -1, -1));
 
         Idade.setText("Idade :");
-        jPanel1.add(Idade, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 81, -1, -1));
 
         txtIdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdadeActionPerformed(evt);
             }
         });
-        jPanel1.add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 78, 35, -1));
 
         jLabel1.setText("Etnia :");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(286, 81, -1, -1));
 
         jLabel2.setText("Educação :");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
         jComboEducacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desistiu da escola antes dos 16 Anos", "Desistiu da escola aos 16 anos", "Desistiu da escola aos 17 anos", "Desistiu da escola aos 18 anos","Alguma facul/uni sem certificado ou grau","Certificado / diploma profissional","Diploma Universitário","Mestrado","Doutorado" }));
-        jPanel1.add(jComboEducacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 450, -1));
 
         jComboEtnia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asiático", "Negro","Branco", "Misto Negro/Asiatico", "Misto Branco/Asiatico","Misto Branco/Negro","Outro" }));
-        jPanel1.add(jComboEtnia, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 78, 219, -1));
 
         jLabel3.setText("Log");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 80, -1, -1));
 
         jLabel4.setText("Alcool");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         txtAlcool.setEditable(false);
         txtAlcool.addActionListener(new java.awt.event.ActionListener() {
@@ -159,10 +144,8 @@ public class tela_principal extends javax.swing.JFrame {
                 txtAlcoolActionPerformed(evt);
             }
         });
-        jPanel1.add(txtAlcool, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 100, -1));
 
         jLabel5.setText("Anfetaminas");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
 
         txtAnfetaminas.setEditable(false);
         txtAnfetaminas.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +153,6 @@ public class tela_principal extends javax.swing.JFrame {
                 txtAnfetaminasActionPerformed(evt);
             }
         });
-        jPanel1.add(txtAnfetaminas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 100, -1));
 
         txtNitrito.setEditable(false);
         txtNitrito.addActionListener(new java.awt.event.ActionListener() {
@@ -178,10 +160,8 @@ public class tela_principal extends javax.swing.JFrame {
                 txtNitritoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNitrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 100, -1));
 
         jLabel6.setText("Nitrito");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
 
         txtBenzodiazepina.setEditable(false);
         txtBenzodiazepina.addActionListener(new java.awt.event.ActionListener() {
@@ -189,13 +169,10 @@ public class tela_principal extends javax.swing.JFrame {
                 txtBenzodiazepinaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtBenzodiazepina, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 100, -1));
 
         jLabel7.setText("Benzodiazepina");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, -1, -1));
 
         jLabel8.setText("Cafeína");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
 
         txtCafeina.setEditable(false);
         txtCafeina.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +180,6 @@ public class tela_principal extends javax.swing.JFrame {
                 txtCafeinaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtCafeina, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, 100, -1));
 
         txtMaconha.setEditable(false);
         txtMaconha.addActionListener(new java.awt.event.ActionListener() {
@@ -211,10 +187,8 @@ public class tela_principal extends javax.swing.JFrame {
                 txtMaconhaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtMaconha, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 100, -1));
 
         jLabel9.setText("Maconha");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 230, -1, -1));
 
         txtChocolate.setEditable(false);
         txtChocolate.addActionListener(new java.awt.event.ActionListener() {
@@ -222,13 +196,10 @@ public class tela_principal extends javax.swing.JFrame {
                 txtChocolateActionPerformed(evt);
             }
         });
-        jPanel1.add(txtChocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 100, -1));
 
         jLabel10.setText("Chocolate");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
         jLabel11.setText("Cocaina");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, -1));
 
         txtCocaina.setEditable(false);
         txtCocaina.addActionListener(new java.awt.event.ActionListener() {
@@ -236,7 +207,6 @@ public class tela_principal extends javax.swing.JFrame {
                 txtCocainaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtCocaina, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 100, -1));
 
         txtCrack.setEditable(false);
         txtCrack.addActionListener(new java.awt.event.ActionListener() {
@@ -244,10 +214,8 @@ public class tela_principal extends javax.swing.JFrame {
                 txtCrackActionPerformed(evt);
             }
         });
-        jPanel1.add(txtCrack, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 100, -1));
 
         jLabel12.setText("Crack");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, -1, -1));
 
         txtEcstasy.setEditable(false);
         txtEcstasy.addActionListener(new java.awt.event.ActionListener() {
@@ -255,13 +223,10 @@ public class tela_principal extends javax.swing.JFrame {
                 txtEcstasyActionPerformed(evt);
             }
         });
-        jPanel1.add(txtEcstasy, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 100, -1));
 
         jLabel13.setText("Ecstasy");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
         jLabel14.setText("Heroina");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
 
         txtHeroina.setEditable(false);
         txtHeroina.addActionListener(new java.awt.event.ActionListener() {
@@ -269,7 +234,6 @@ public class tela_principal extends javax.swing.JFrame {
                 txtHeroinaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtHeroina, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 100, -1));
 
         txtKetamina.setEditable(false);
         txtKetamina.addActionListener(new java.awt.event.ActionListener() {
@@ -277,13 +241,10 @@ public class tela_principal extends javax.swing.JFrame {
                 txtKetaminaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtKetamina, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 100, -1));
 
         jLabel15.setText("ketamina");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, -1));
 
         jLabel16.setText("Drogas Legais");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 90, -1));
 
         txtDrogas.setEditable(false);
         txtDrogas.addActionListener(new java.awt.event.ActionListener() {
@@ -291,7 +252,6 @@ public class tela_principal extends javax.swing.JFrame {
                 txtDrogasActionPerformed(evt);
             }
         });
-        jPanel1.add(txtDrogas, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 100, -1));
 
         txtLsd.setEditable(false);
         txtLsd.addActionListener(new java.awt.event.ActionListener() {
@@ -299,10 +259,8 @@ public class tela_principal extends javax.swing.JFrame {
                 txtLsdActionPerformed(evt);
             }
         });
-        jPanel1.add(txtLsd, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 100, -1));
 
         jLabel17.setText("LSD");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 310, -1, -1));
 
         txtMetadona.setEditable(false);
         txtMetadona.addActionListener(new java.awt.event.ActionListener() {
@@ -310,10 +268,8 @@ public class tela_principal extends javax.swing.JFrame {
                 txtMetadonaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtMetadona, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, 100, -1));
 
         jLabel18.setText("Metadona");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
 
         txtCogumelos.setEditable(false);
         txtCogumelos.addActionListener(new java.awt.event.ActionListener() {
@@ -321,10 +277,8 @@ public class tela_principal extends javax.swing.JFrame {
                 txtCogumelosActionPerformed(evt);
             }
         });
-        jPanel1.add(txtCogumelos, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, 100, -1));
 
         jLabel19.setText("Cogumelos Magicos");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, -1, -1));
 
         txtNicotina.setEditable(false);
         txtNicotina.addActionListener(new java.awt.event.ActionListener() {
@@ -332,13 +286,10 @@ public class tela_principal extends javax.swing.JFrame {
                 txtNicotinaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNicotina, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 100, -1));
 
         jLabel20.setText("Nicotina");
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, -1, -1));
 
         jLabel21.setText("VSA");
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, -1, -1));
 
         txtVsa.setEditable(false);
         txtVsa.addActionListener(new java.awt.event.ActionListener() {
@@ -346,7 +297,6 @@ public class tela_principal extends javax.swing.JFrame {
                 txtVsaActionPerformed(evt);
             }
         });
-        jPanel1.add(txtVsa, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 330, 100, -1));
 
         btnClassificar.setText("Classificar");
         btnClassificar.addActionListener(new java.awt.event.ActionListener() {
@@ -354,10 +304,6 @@ public class tela_principal extends javax.swing.JFrame {
                 btnClassificarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnClassificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 150, 33));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 690, 10));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 207, 690, 10));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 690, 10));
 
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -365,8 +311,6 @@ public class tela_principal extends javax.swing.JFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 136, 33));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 690, 10));
 
         btnComparar.setText("Classificar Parte da Base");
         btnComparar.addActionListener(new java.awt.event.ActionListener() {
@@ -374,17 +318,227 @@ public class tela_principal extends javax.swing.JFrame {
                 btnCompararActionPerformed(evt);
             }
         });
-        jPanel1.add(btnComparar, new org.netbeans.lib.awtextra.AbsoluteConstraints(486, 160, 210, 33));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(390, 390, 390)
+                .addComponent(titulo))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(Sexo)
+                .addGap(26, 26, 26)
+                .addComponent(jComboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Idade)
+                .addGap(4, 4, 4)
+                .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(4, 4, 4)
+                .addComponent(jComboEtnia, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(170, 170, 170)
+                .addComponent(jLabel3))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel2)
+                        .addGap(17, 17, 17)
+                        .addComponent(jComboEducacao, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnClassificar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(180, 180, 180)
+                        .addComponent(btnComparar, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel4)
+                        .addGap(62, 62, 62)
+                        .addComponent(jLabel5)
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel6)
+                        .addGap(51, 51, 51)
+                        .addComponent(jLabel7)
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel8)
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel9))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txtAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtAnfetaminas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtMaconha, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtNitrito, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtBenzodiazepina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtCafeina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel10)
+                        .addGap(72, 72, 72)
+                        .addComponent(jLabel11)
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel12)
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel15)
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel17))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txtChocolate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtCocaina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtCrack, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtKetamina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtDrogas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtVsa, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel13)
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel14)
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel18)
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel19)
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel20)
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel21))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txtEcstasy, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtHeroina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtLsd, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtCogumelos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtNicotina, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtMetadona, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(titulo)
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(Sexo))
+                    .addComponent(jComboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(Idade))
+                    .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel1))
+                    .addComponent(jComboEtnia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jLabel3)))
+                .addGap(2, 2, 2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jComboEducacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnClassificar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnComparar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(14, 14, 14)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAnfetaminas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMaconha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNitrito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBenzodiazepina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCafeina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel17))
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtChocolate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCocaina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCrack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKetamina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDrogas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtVsa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel21))
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtEcstasy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHeroina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLsd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCogumelos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNicotina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMetadona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1230, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -537,7 +691,7 @@ public class tela_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnCompararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompararActionPerformed
-        float[] porc = k.classificarParcial();
+        float[] porc = k.ClassificarParcial();
         txtAlcool.setText("" + porc[0] + "%");
         txtAnfetaminas.setText("" + porc[1] + "%");
         txtNitrito.setText("" + porc[2] + "%");

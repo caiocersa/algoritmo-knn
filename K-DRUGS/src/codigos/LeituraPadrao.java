@@ -2,15 +2,17 @@ package codigos;
 
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class LeituraPadrao {
 
 	public ArrayList lerArquivo() {
 		try {
-			FileReader arquivo = new FileReader("src/arquivos/resultadoFinal.txt");
-			BufferedReader br = new BufferedReader(arquivo);
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream
+                        ("/arquivos/resultadoFinal.txt")));
 			String linha;
 			ArrayList<Padrao> padroes = new ArrayList<>();
 
@@ -45,6 +47,7 @@ public class LeituraPadrao {
 			
 
 		} catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "Erro "+e);
 			System.out.println("Erro " + e.getMessage());
                         return null;
                         
@@ -54,8 +57,8 @@ public class LeituraPadrao {
         
         public ArrayList lerArquivoParcial() {
 		try {
-			FileReader arquivo = new FileReader("src/arquivos/resultadoParcial.txt");
-			BufferedReader br = new BufferedReader(arquivo);
+			BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream
+                        ("/arquivos/resultadoParcial.txt")));
 			String linha;
 			ArrayList<Padrao> padroes = new ArrayList<>();
 
@@ -90,6 +93,7 @@ public class LeituraPadrao {
 			
 
 		} catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "Erro "+e);
 			System.out.println("Erro " + e.getMessage());
                         return null;
                         
