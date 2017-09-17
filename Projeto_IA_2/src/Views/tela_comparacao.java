@@ -6,7 +6,6 @@
 package Views;
 
 import codigos.Classificador;
-import codigos.ClassificadorParcial;
 import codigos.Log;
 import codigos.Padrao;
 import javax.swing.JOptionPane;
@@ -29,58 +28,6 @@ public class tela_comparacao extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void preencherClassificarGeral(String resultadoClassificarGeral,int selectedSexo, String idade, int selectedEducacao, int selectedEtnia) {
-        jComboSexo.setSelectedIndex(selectedSexo);
-        txtIdade.setText(idade);
-        jComboEducacao.setSelectedIndex(selectedEducacao);
-        jComboEtnia.setSelectedIndex(selectedEtnia);
-        
-        String[] r = resultadoClassificarGeral.split(":");
-
-        txtAlcool.setText(classifica(r[0]));
-        txtAnfetaminas.setText(classifica(r[1]));
-        txtNitrito.setText(classifica(r[2]));
-        txtBenzodiazepina.setText(classifica(r[3]));
-        txtCafeina.setText(classifica(r[4]));
-        txtMaconha.setText(classifica(r[5]));
-        txtChocolate.setText(classifica(r[6]));
-        txtCocaina.setText(classifica(r[7]));
-        txtCrack.setText(classifica(r[9]));
-        txtEcstasy.setText(classifica(r[10]));
-        txtHeroina.setText(classifica(r[11]));
-        txtKetamina.setText(classifica(r[12]));
-        txtDrogas.setText(classifica(r[13]));
-        txtLsd.setText(classifica(r[14]));
-        txtMetadona.setText(classifica(r[15]));
-        txtCogumelos.setText(classifica(r[16]));
-        txtNicotina.setText(classifica(r[18]));
-        txtVsa.setText(classifica(r[19]));
-    }
-
-    public void classificarParcial(Padrao p) {
-        ClassificadorParcial k = new ClassificadorParcial();
-        result = k.classifica(p);
-        String[] r = result.split(":");
-
-        txtAlcool1.setText(classifica(r[0]));
-        txtAnfetaminas1.setText(classifica(r[1]));
-        txtNitrito1.setText(classifica(r[2]));
-        txtBenzodiazepina1.setText(classifica(r[3]));
-        txtCafeina1.setText(classifica(r[4]));
-        txtMaconha1.setText(classifica(r[5]));
-        txtChocolate1.setText(classifica(r[6]));
-        txtCocaina1.setText(classifica(r[7]));
-        txtCrack1.setText(classifica(r[9]));
-        txtEcstasy1.setText(classifica(r[10]));
-        txtHeroina1.setText(classifica(r[11]));
-        txtKetamina1.setText(classifica(r[12]));
-        txtDrogas1.setText(classifica(r[13]));
-        txtLsd1.setText(classifica(r[14]));
-        txtMetadona1.setText(classifica(r[15]));
-        txtCogumelos1.setText(classifica(r[16]));
-        txtNicotina1.setText(classifica(r[18]));
-        txtVsa1.setText(classifica(r[19]));
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.

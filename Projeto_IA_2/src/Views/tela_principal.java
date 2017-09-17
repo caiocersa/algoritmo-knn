@@ -6,8 +6,8 @@
 package Views;
 
 import codigos.Classificador;
-import codigos.ClassificadorParcial;
 import codigos.Log;
+import codigos.LogClassParcial;
 import codigos.Padrao;
 import javax.swing.JOptionPane;
 
@@ -22,11 +22,12 @@ public class tela_principal extends javax.swing.JFrame {
     int G2;
     double GRAU;
     int ET1, ET2, ET3, ET4, ET5, ET6, ET7;
-    
+    Classificador k;
     String result;
 
     public tela_principal() {
         initComponents();
+        k = new Classificador();
     }
 
     /**
@@ -367,8 +368,7 @@ public class tela_principal extends javax.swing.JFrame {
         jPanel1.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 136, 33));
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 690, 10));
 
-        btnComparar.setText("Comparar(base parcial)");
-        btnComparar.setEnabled(false);
+        btnComparar.setText("Classificar Parte da Base");
         btnComparar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompararActionPerformed(evt);
@@ -478,10 +478,10 @@ public class tela_principal extends javax.swing.JFrame {
         converteEducacao((String) jComboEducacao.getSelectedItem());
         converteEtnia((String) jComboEtnia.getSelectedItem());
         if (IDADE == -1) {
-            JOptionPane.showMessageDialog(null,"Idade Inválida !");
+            JOptionPane.showMessageDialog(null, "Idade Inválida !");
         } else {
             Padrao p = new Padrao(IDADE, G1, G2, GRAU, ET1, ET2, ET3, ET4, ET5, ET6, ET7, null, 0);
-            Classificador k = new Classificador();
+            k = new Classificador();
             result = k.classifica(p);
             String[] r = result.split(":");
 
@@ -504,9 +504,8 @@ public class tela_principal extends javax.swing.JFrame {
             txtNicotina.setText(classifica(r[18]));
             txtVsa.setText(classifica(r[19]));
 
-            jTextLog.setText(Log.resumo());          
-            
-            btnComparar.setEnabled(true);
+            jTextLog.setText(Log.resumo());
+
         }
 
 
@@ -517,10 +516,28 @@ public class tela_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnCompararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompararActionPerformed
-        tela_comparacao tc = new tela_comparacao();
-        tc.preencherClassificarGeral(result,jComboSexo.getSelectedIndex(),txtIdade.getText(),jComboEducacao.getSelectedIndex(),jComboEtnia.getSelectedIndex());
-        tc.classificarParcial(new Padrao(IDADE, G1, G2, GRAU, ET1, ET2, ET3, ET4, ET5, ET6, ET7, null, 0));
-        tc.show();
+        float[] porc = k.classificarParcial();
+        txtAlcool.setText(""+porc[0]+"%");
+        txtAnfetaminas.setText(""+porc[1]+"%");
+        txtNitrito.setText(""+porc[2]+"%");
+        txtBenzodiazepina.setText(""+porc[3]+"%");
+        txtCafeina.setText(""+porc[4]+"%");
+        txtMaconha.setText(""+porc[5]+"%");
+        txtChocolate.setText(""+porc[6]+"%");
+        txtCocaina.setText(""+porc[7]+"%");
+        txtCrack.setText(""+porc[9]+"%");
+        txtEcstasy.setText(""+porc[10]+"%");
+        txtHeroina.setText(""+porc[11]+"%");
+        txtKetamina.setText(""+porc[12]+"%");
+        txtDrogas.setText(""+porc[13]+"%");
+        txtLsd.setText(""+porc[14]+"%");
+        txtMetadona.setText(""+porc[15]+"%");
+        txtCogumelos.setText(""+porc[16]+"%");
+        txtNicotina.setText(""+porc[18]+"%");
+        txtVsa.setText(""+porc[19]+"%");
+        
+        jTextLog.setText("");        
+        jTextLog.setText(""+LogClassParcial.resumo());
     }//GEN-LAST:event_btnCompararActionPerformed
 
     /**

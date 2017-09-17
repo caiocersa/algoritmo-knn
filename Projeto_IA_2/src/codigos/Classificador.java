@@ -84,4 +84,37 @@ public class Classificador {
         }
         return -1;
     }
+    
+    public float[] classificarParcial(){
+        Log.limpaLog();
+        LogClassParcial.limpaLog();
+        LeituraPadrao lp = new LeituraPadrao();
+        ArrayList<Padrao> padroes = lp.lerArquivoParcial();
+        LogClassParcial.LOG.add(padroes.size() + " padrões foram carregados");
+        float[] somaAcertos = new float[padroes.get(0).getClassificacao().split(":").length];
+        float[] porc = new float[padroes.get(0).getClassificacao().split(":").length];
+        
+        for (int x = 0; x < padroes.size(); x++) {
+            //Log.LOG.add("Parão testado");
+            String[] p = padroes.get(x).getClassificacao().split(":");
+            String[] resultado = classifica(padroes.get(x)).split(":");
+            float totalAux = 0f;
+            for (int i = 0; i < p.length; i++) {
+                if (p[i].equals(resultado[i])){
+                    somaAcertos[i] = somaAcertos[i] + 1;
+                    totalAux++;
+                }
+            }
+            LogClassParcial.LOG.add("Taxa de acerto para Padrão " + (x+1) + ":     " + ((totalAux/20)*100) + "%");
+        }
+        
+        for (int i = 0; i < somaAcertos.length; i++) {
+            if (i != 8) 
+            porc[i] = (somaAcertos[i]/padroes.size())*100;
+        }
+        
+        return porc;
+        
+    }
+    
 }

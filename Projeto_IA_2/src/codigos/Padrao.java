@@ -156,5 +156,5 @@ public class Padrao implements Comparable<Padrao>  {
         }
         return 0;
     }
-
+    
 }
